@@ -37,4 +37,6 @@ Please keep all words in the `custom.dic` file sorted in alphabetical order, low
 
 ### Committing
 
-There is a "linter" check running before each commit. All the above standards must be respected, in order to commit.
+There is a "linter" check running before every commit to ensure code quality in the entire project. All the above standards must be respected, in order to commit.
+
+> 💡 **Note:** First time it might be necessary to run `npx simple-git-hooks` to make sure git-hooks runs correctly on commit.
