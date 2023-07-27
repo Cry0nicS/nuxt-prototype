@@ -1,0 +1,59 @@
+{
+    "name": "nuxt-prototype",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "clean": "rm -rf node_modules/",
+        "dev": "nuxt dev",
+        "format": "prettier --write \"**/*.{js,json,jsx,scss,ts,tsx}\"",
+        "format-check": "prettier --check \"**/*.{html,js,json,jsx,scss,ts,tsx}\"",
+        "generate": "nuxt generate",
+        "lint": "eslint --ext .ts,.js,vue .",
+        "postinstall": "nuxt prepare",
+        "preview": "nuxt preview",
+        "spell-check": "cspell --no-progress",
+        "style-check": "stylelint \"**/*.{scss,vue}\"",
+        "style-fix": "stylelint --fix \"**/*.{scss,vue}\""
+    },
+    "devDependencies": {
+        "@nuxt/devtools": "latest",
+        "@nuxtjs/eslint-module": "^4.1.0",
+        "@nuxtjs/stylelint-module": "^5.1.0",
+        "@types/node": "^18.16.19",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.45.0",
+        "eslint-config-prettier": "^8.9.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-simple-import-sort": "^10.0.0",
+        "eslint-plugin-vue": "^9.15.1",
+        "nuxt": "^3.6.2",
+        "postcss": "^8.4.26",
+        "postcss-html": "^1.5.0",
+        "prettier": "3.0.0",
+        "prettier-plugin-tailwindcss": "^0.4.1",
+        "stylelint-config-standard-scss": "^10.0.0",
+        "stylelint-config-standard-vue": "^1.0.0",
+        "tailwindcss": "^3.3.3"
+    },
+    "dependencies": {
+        "@cspell/dict-de-de": "^3.1.0",
+        "@nuxtjs/eslint-config-typescript": "^12.0.0",
+        "@typescript-eslint/parser": "^5.62.0",
+        "cspell": "^6.31.1",
+        "lint-staged": "^13.2.2",
+        "sass": "^1.63.6",
+        "simple-git-hooks": "^2.8.1",
+        "stylelint": "^15.10.1",
+        "typescript": "^5.1.6"
+    },
+    "lint-staged": {
+        "*.{html,js,json,jsx,md,scss,ts,tsx,vue}": "cspell --no-must-find-files",
+        "*.{html,js,json,jsx,scss,ts,tsx,vue}": "prettier --check",
+        "*.{js,jsx,ts,tsx,vue}": "eslint",
+        "*.{scss,vue}": "stylelint"
+    },
+    "simple-git-hooks": {
+        "commit-msg": "npx commitlint --edit \"$1\"",
+        "pre-commit": "npx lint-staged"
+    }
+}
