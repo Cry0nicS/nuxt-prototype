@@ -1,7 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
     <div>
-        <div>
-            <h1 class="text-3xl font-bold underline">Home page!</h1>
-        </div>
+        <h1 class="text-3xl underline font-bold">Hello world!</h1>
     </div>
 </template>
